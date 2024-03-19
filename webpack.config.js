@@ -1,5 +1,5 @@
 const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -13,11 +13,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './index.html', // Adjust the path as necessary
           }),
-        new CopyWebpackPlugin({
-            patterns: [
-                { from: 'src/img', to: 'img' }, // Adjust 'img' to your images directory path
-            ],
-        }),
+        // new CopyWebpackPlugin({
+        //     patterns: [
+        //         { from: 'src/img', to: 'img' }, // Adjust 'img' to your images directory path
+        //     ],
+        // }),
     ],
     module: {
         rules: [
@@ -25,6 +25,9 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'img/[hash][ext][query]' // Output images to 'img' folder with hash
+                }
             },
         ],
     },
