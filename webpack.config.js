@@ -3,6 +3,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    mode: 'production', 
     entry: './src/main.js', // Adjust this to the path of your main JS file
     output: {
         filename: 'bundle.js',
