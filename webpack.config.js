@@ -1,5 +1,6 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: './src/main.js', // Adjust this to the path of your main JS file
@@ -8,6 +9,9 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            template: './index.html', // Adjust the path as necessary
+          }),
         new CopyWebpackPlugin({
             patterns: [
                 { from: 'src/img', to: 'img' }, // Adjust 'img' to your images directory path
