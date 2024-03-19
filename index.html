@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helios Computer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-top: 2rem;
+        }
+        #carousel {
+            width: 100%;
+            height: calc(100vh - 10rem); /* Adjust the 6rem to a higher value to account for other page elements */
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <h1>Helios Computer</h1>
+    <img id="carousel" src="" alt="Helios Computer">
+
+    <!-- Include the Webpack generated bundle.js file -->
+    <script src="dist/bundle.js"></script>
+</body>
+</html>
