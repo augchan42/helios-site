@@ -1,4 +1,5 @@
 import './gtm'; // This assumes you named the file gtm.js
+import './gtag';
 
 // Assuming your images are in 'src/img' and you want them copied to 'dist/img'
 // This example uses a dynamic require context which Webpack understands
