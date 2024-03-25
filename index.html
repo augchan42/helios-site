@@ -23,12 +23,31 @@
             height: calc(100vh - 10rem); /* Adjust the 6rem to a higher value to account for other page elements */
             object-fit: contain;
         }
+
+        /* Add the styles below */
+        footer {
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #222; /* Adjust the background color as needed */
+        }
+        footer a {
+            color: #4fa1f3; /* Adjust the link color as needed */
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <h1>Helios Computer</h1>
     <img id="carousel" src="" alt="Helios Computer">
 
+    <footer>
+        Developed by <a href="https://iterative.day" target="_blank" rel="noopener noreferrer">iterative.day</a>
+    </footer>
     <!-- Include the Webpack generated bundle.js file -->
     <script src="dist/bundle.js"></script>
 </body>
